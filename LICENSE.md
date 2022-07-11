@@ -1,5 +1,6 @@
-MIT License
+# The MIT License (MIT)
 
+Copyright (c) 2016 [YarCode Agency](http://yarcode.com)
 Copyright (c) 2022 Customer Solutions Development Department
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
