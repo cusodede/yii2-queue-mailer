@@ -10,7 +10,7 @@ Installation
 ```
 {
 	"type": "vcs",
-	"url": "https://github.com/cusodede/yii2-queue-mailer.git"
+	"url": "https://github.com/cusodede/yii2-queue-mailer"
 }
 ```
 
