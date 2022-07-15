@@ -125,6 +125,12 @@ class SyncMailerTest extends TestCase
 			->setTo(static::TEST_EMAIL_TO);
 		$this::assertTrue($this->mailer->send($message));
 
+		(new SendMessageJob([
+			'mailer' => $this->mailer,
+			'message' => $message
+		]))->execute($this->mailer->queue);
+
+
 	}
 
 }
