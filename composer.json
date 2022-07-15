@@ -21,13 +21,20 @@
 		"php": ">=8.0",
 		"yiisoft/yii2": "~2",
 		"yiisoft/yii2-queue": "~2"
+
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-latest",
 		"phpunit/phpunit": "^9.5",
-		"yiisoft/yii2-swiftmailer": "~2"
+		"yiisoft/yii2-swiftmailer": "~2",
+		"yiisoft/yii2-symfonymailer": "dev-deffered_transport",
+		"pozitronik/yii2-helpers": "^1.0"
 	},
 	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/pozitronik/yii2-symfonymailer"
+		},
 		{
 			"type": "composer",
 			"url": "https://asset-packagist.org"
