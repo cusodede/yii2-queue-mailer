@@ -1,7 +1,7 @@
 # Queue mailer decorator for Yii2 framework
 Send your emails in the background using Yii2 queues.
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cusodede/yii2-queue-mailer/Run%20tests)
+[![Build Status](https://github.com/cusodede/yii2-queue-mailer/actions/workflows/run_tests.yml/badge.svg)](https://github.com/cusodede/yii2-queue-mailer/actions)
 
 # Установка
 
