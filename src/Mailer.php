@@ -3,16 +3,16 @@ declare(strict_types = 1);
 
 namespace cusodede\QueueMailer;
 
+use cusodede\QueueMailer\jobs\SendMessageJob;
+use cusodede\QueueMailer\jobs\SendMultipleMessagesJob;
 use Yii;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
 use yii\di\Instance;
 use yii\mail\MailerInterface;
+use yii\mail\MessageInterface;
 use yii\queue\Queue;
 use yii\swiftmailer\Mailer as SwiftMailer;
-use cusodede\QueueMailer\jobs\SendMultipleMessagesJob;
-use cusodede\QueueMailer\jobs\SendMessageJob;
-use yii\mail\MessageInterface;
 
 /**
  * Декоратор Mailer с функционалом очереди.
@@ -82,11 +82,13 @@ class Mailer extends Component implements MailerInterface
 	}
 
 	/**
+	 * @param array|null|string $view
+	 * @param array $params
+	 * @return MessageInterface
 	 * @throws InvalidConfigException
-	 * @see MailerInterface::compose()
-	 *
+	 * @psalm-suppress MethodSignatureMismatch
 	 */
-	public function compose(mixed $view = null, array $params = []): MessageInterface
+	public function compose($view = null, array $params = [])
 	{
 		return $this->getSyncMailer()->compose($view, $params);
 	}
